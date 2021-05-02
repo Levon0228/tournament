@@ -1,35 +1,35 @@
 /** @format */
 
 import Pair from "./GroupAPair";
+import Final from "./Final";
 
-const GroupA = ({ groupA, quarterfinals, semifinals }) => {
+const GroupA = ({
+  eighthfinalGroupATeams,
+  quarterfinalsGroupATeams,
+  semifinalsGroupATeams,
+  groupAFinalTeam,
+}) => {
   return (
     <div className="groupA">
       <section className="round eighthfinal">
-        {groupA.map((pair) => (
-          <Pair pair={pair} />
+        {eighthfinalGroupATeams.map((pair, idx) => (
+          <Pair key={idx} pair={pair} />
         ))}
       </section>
 
       <section className="round quarterfinals">
-        {quarterfinals.map((pair) => (
-          <Pair />
+        {quarterfinalsGroupATeams.map((pair, idx) => (
+          <Pair key={idx} pair={pair} />
         ))}
       </section>
 
       <section className="round semifinals">
-        {semifinals.map((pair) => (
-          <Pair />
+        {semifinalsGroupATeams.map((pair, idx) => (
+          <Pair key={idx} pair={pair} />
         ))}
       </section>
       <section className="round finals">
-        <div className="winners">
-          <div className="matchups">
-            <div className="matchup">
-              <div className="participants"></div>
-            </div>
-          </div>
-        </div>
+        <Final groupAFinalTeam={groupAFinalTeam} />
       </section>
     </div>
   );

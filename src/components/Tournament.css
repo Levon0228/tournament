@@ -13,19 +13,28 @@
 
 .buyton-cont {
   height: fit-content;
-  margin: 80px;
+  margin: 80px 0;
 }
 
 .playBtn {
   width: 100px;
-  height: 40px;
+  height: 50px;
   font-size: 18px;
-  background: green;
+  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 2px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
+}
+.playBtn:hover {
+  background: #fff;
+  color: #4caf50;
+  transition: all 0.8s;
+}
+.champion-cont .participants {
+  border: 2px solid #ffb100 !important;
+  margin: 5px 10px;
 }
 .groupA {
   margin-right: 20px;
@@ -33,64 +42,59 @@
 .groupB {
   margin-left: 20px;
 }
-.bracket .round {
+.round {
   display: inline-block;
   vertical-align: middle;
 }
-.bracket .groupA .round .winners > div {
+.groupA .round .winners > div {
   display: inline-block;
   vertical-align: middle;
 }
-.bracket .round .winners > div.matchups .matchup:last-child {
+.matchup:last-child {
   margin-bottom: 0 !important;
 }
-.bracket .round .winners > div.matchups .matchup .participants {
+.matchup .participants {
   border-radius: 2px;
   overflow: hidden;
 }
-.bracket .round .winners > div.matchups .matchup .participants {
+.matchup .participants {
   box-sizing: border-box;
   color: #858585;
   background: white;
-  border-radius: 50%;
+  border-radius: 10%;
   border: 2px solid #777;
-  width: 50px;
+  width: 90px;
   height: 50px;
-  box-shadow: 0 2px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.bracket
-  .round
-  .winners
-  > div.matchups
-  .matchup
-  .participants:not(:last-child) {
+.round .winners > div.matchups .matchup .participants:not(:last-child) {
   border-bottom: thin solid #f0f2f2;
 }
-.bracket .round .winners > div.matchups .matchup .participants span {
-  margin: 0 12px;
-  line-height: 3;
+.matchup .participants span {
+  line-height: 1.5;
   font-size: 14px;
-  font-family: "Roboto Slab";
+  color: #000;
+  white-space: normal;
 }
 
-.bracket .round .winners > div.connector .line,
-.bracket .round .winners > div.connector .merger {
+.connector .line,
+.connector .merger {
   box-sizing: border-box;
   width: 30px;
   display: inline-block;
   vertical-align: top;
 }
-.bracket .round .winners > div.connector .line {
+.connector .line {
   border-bottom: thin solid #c0c0c8;
   height: 40px;
 }
-.bracket .round .winners > div.connector .merger {
+.connector .merger {
   position: relative;
   height: 80px;
 }
-.bracket .round .winners > div.connector .merger:before,
-.bracket .round .winners > div.connector .merger:after {
+.connector .merger:before,
+.connector .merger:after {
   content: "";
   display: block;
   box-sizing: border-box;
@@ -99,79 +103,79 @@
   border: 0 solid;
   border-color: #c0c0c8;
 }
-.bracket .groupA .round .winners > div.connector .merger:before {
+.groupA .round .winners > div.connector .merger:before {
   border-right-width: thin;
   border-top-width: thin;
 }
-.bracket .groupA .round .winners > div.connector .merger:after {
+.groupA .round .winners > div.connector .merger:after {
   border-right-width: thin;
   border-bottom-width: thin;
 }
 
-.bracket .round.eighthfinal .winners:not(:last-child) {
+.round.eighthfinal .winners:not(:last-child) {
   margin-bottom: 20px;
 }
-.bracket .round.eighthfinal .winners .matchups .matchup:not(:last-child) {
+.round.eighthfinal .winners .matchups .matchup:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.bracket .round.quarterfinals .winners:not(:last-child) {
+.round.quarterfinals .winners:not(:last-child) {
   margin-bottom: 100px;
 }
-.bracket .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
+.round.quarterfinals .winners .matchups .matchup:not(:last-child) {
   margin-bottom: 85px;
 }
-.bracket .groupA .round.quarterfinals .winners .connector .merger {
+.groupA .round.quarterfinals .winners .connector .merger {
   height: 150px;
 }
-.bracket .groupA .round.quarterfinals .winners .connector .line {
+.groupA .round.quarterfinals .winners .connector .line {
   height: 80px;
 }
 
-.bracket .round.semifinals .winners .matchups .matchup:not(:last-child) {
+.round.semifinals .winners .matchups .matchup:not(:last-child) {
   margin-bottom: 235px;
 }
-.bracket .groupA .round.semifinals .winners .connector .merger {
+.groupA .round.semifinals .winners .connector .merger {
   height: 290px;
 }
-.bracket .groupA .round.semifinals .winners .connector .line {
+.groupA .round.semifinals .winners .connector .line {
   height: 145px;
 }
-.bracket .groupA .round.finals .winners .connector .merger {
+.groupA .round.finals .winners .connector .merger {
   height: 30px;
 }
-.bracket .groupA .round.finals .winners .connector .line {
+.groupA .round.finals .winners .connector .line {
   height: 15px;
 }
 
 /* GROUP--B -----------------------------------------------------------------------
 
-:-moz-any()
+
 -
 */
 
-.bracket .groupB .round .winners > div {
+.groupB .round .winners > div {
   display: inline-block;
   vertical-align: middle;
 }
 
-.bracket .groupB .round .winners > div.connector .line,
-.bracket .groupB .round .winners > div.connector .merger {
+.groupB .round .winners > div.connector .line,
+.groupB .round .winners > div.connector .merger {
   box-sizing: border-box;
   width: 30px;
   display: inline-block;
   vertical-align: top;
 }
-.bracket .groupB .round .winners > div.connector .line {
+.groupB .round .winners > div.connector .line {
   border-bottom: thin solid #c0c0c8;
   height: 40px;
 }
-.bracket .groupB .round .winners > div.connector .merger {
+.groupB .round .winners > div.connector .merger {
   position: relative;
   height: 80px;
 }
-.bracket .groupB .round .winners > div.connector .merger:before,
-.bracket .groupB .round .winners > div.connector .merger:after {
+.groupB .round .winners > div.connector .merger:before,
+.groupB .round .winners > div.connector .merger:after {
   content: "";
   display: block;
   box-sizing: border-box;
@@ -180,62 +184,49 @@
   border: 0 solid;
   border-color: #c0c0c8;
 }
-.bracket .groupB .round .winners > div.connector .merger:before {
+.groupB .round .winners > div.connector .merger:before {
   border-left-width: thin;
   border-top-width: thin;
 }
-.bracket .groupB .round .winners > div.connector .merger:after {
+.groupB .round .winners > div.connector .merger:after {
   border-left-width: thin;
   border-bottom-width: thin;
 }
 
-.bracket .groupB .round.eighthfinal .winners:not(:last-child) {
-  margin-bottom: 20px;
-}
-.bracket
-  .groupB
-  .round.eighthfinal
-  .winners
-  .matchups
-  .matchup:not(:last-child) {
+.groupB .round.eighthfinal .winners:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.bracket .groupB .round.quarterfinals .winners:not(:last-child) {
+.groupB .round.eighthfinal .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.groupB .round.quarterfinals .winners:not(:last-child) {
   margin-bottom: 100px;
 }
-.bracket
-  .groupB
-  .round.quarterfinals
-  .winners
-  .matchups
-  .matchup:not(:last-child) {
+
+.groupB .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
   margin-bottom: 85px;
 }
-.bracket .groupB .round.quarterfinals .winners .connector .merger {
+.groupB .round.quarterfinals .winners .connector .merger {
   height: 150px;
 }
-.bracket .groupB .round.quarterfinals .winners .connector .line {
+.groupB .round.quarterfinals .winners .connector .line {
   height: 80px;
 }
 
-.bracket
-  .groupB
-  .round.semifinals
-  .winners
-  .matchups
-  .matchup:not(:last-child) {
+.groupB .round.semifinals .winners .matchups .matchup:not(:last-child) {
   margin-bottom: 235px;
 }
-.bracket .groupB .round.semifinals .winners .connector .merger {
+.groupB .round.semifinals .winners .connector .merger {
   height: 290px;
 }
-.bracket .groupB .round.semifinals .winners .connector .line {
+.groupB .round.semifinals .winners .connector .line {
   height: 145px;
 }
-.bracket .groupB .round.finals .winners .connector .merger {
+.groupB .round.finals .winners .connector .merger {
   height: 30px;
 }
-.bracket .groupB .round.finals .winners .connector .line {
+.groupB .round.finals .winners .connector .line {
   height: 15px;
 }
